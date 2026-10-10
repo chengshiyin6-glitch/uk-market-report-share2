@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇬🇧 英国尼古丁市场竞品快报 · 2026 Q1-Q2</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0c0f;
+  --surface: #111318;
+  --surface2: #181c22;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --text: #e8eaf0;
+  --muted: #7a808f;
+  --dim: #3d4250;
+  --amber: #f5a623;
+  --amber-dim: rgba(245,166,35,0.12);
+  --amber-border: rgba(245,166,35,0.3);
+  --teal: #2dd4bf;
+  --teal-dim: rgba(45,212,191,0.1);
+  --teal-border: rgba(45,212,191,0.25);
+  --coral: #f87171;
+  --coral-dim: rgba(248,113,113,0.1);
+  --violet: #a78bfa;
+  --violet-dim: rgba(167,139,250,0.1);
+  --green: #4ade80;
+  --green-dim: rgba(74,222,128,0.1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ─── NOISE TEXTURE OVERLAY ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* ─── SCANLINE GRID ─── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 100% 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wrapper { position: relative; z-index: 1; max-width: 1160px; margin: 0 auto; padding: 0 32px; }
+
+/* ─── HEADER ─── */
+.masthead {
+  border-bottom: 1px solid var(--border2);
+  padding: 24px 0;
+  position: sticky;
+  top: 0;
+  background: rgba(10,12,15,0.92);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+}
+.masthead-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.masthead-left { display: flex; align-items: center; gap: 14px; }
+.flag-badge {
+  font-size: 26px;
+  line-height: 1;
+}
+.masthead-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.masthead-sub {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+.masthead-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pill {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+.pill-amber { background: var(--amber-dim); color: var(--amber); border: 1px solid var(--amber-border); }
+.pill-teal  { background: var(--teal-dim);  color: var(--teal);  border: 1px solid var(--teal-border); }
+.pill-muted { background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border); }
+
+/* ─── NAV ─── */
+.nav-bar {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  overflow-x: auto;
+}
+.nav-inner {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+}
+.nav-item {
+  font-size: 12px;
+  padding: 12px 20px;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+.nav-item:hover { color: var(--text); }
+.nav-item.active { color: var(--amber); border-bottom-color: var(--amber); }
+
+/* ─── HERO ─── */
+.hero {
+  padding: 80px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg-text {
+  position: absolute;
+  top: -20px;
+  right: -40px;
+  font-family: 'Syne', sans-serif;
+  font-size: 200px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.02);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.hero-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--teal);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--teal);
+}
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.hero-title span { color: var(--amber); }
+.hero-desc {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 620px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 700px;
+}
+.hero-stat {
+  background: var(--surface);
+  padding: 20px 24px;
+  transition: background 0.2s;
+}
+.hero-stat:hover { background: var(--surface2); }
+.hero-stat-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--amber);
+  line-height: 1;
+}
+.hero-stat-label {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+  letter-spacing: 0.03em;
+}
+
+/* ─── SECTION LAYOUT ─── */
+.section {
+  padding: 64px 0;
+  border-top: 1px solid var(--border);
+}
+.section-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+.section-title .accent { color: var(--amber); }
+
+/* ─── CARDS ─── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.card:hover { border-color: var(--border2); background: var(--surface2); }
+
+.card-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.card-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.card-grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+
+/* ─── EXECUTIVE SUMMARY ─── */
+.exec-grid { display: grid; grid-template-columns: 1fr 360px; gap: 24px; }
+.finding-box {
+  background: linear-gradient(135deg, rgba(245,166,35,0.07), rgba(245,166,35,0.02));
+  border: 1px solid var(--amber-border);
+  border-radius: 12px;
+  padding: 28px;
+}
+.finding-box h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--amber);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.finding-box p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.news-list { list-style: none; }
+.news-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.news-item:last-child { border-bottom: none; }
+.news-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--amber);
+  padding-top: 2px;
+  min-width: 24px;
+}
+.news-content h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.news-content p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+.tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  transition: all 0.2s;
+}
+.tag:hover { color: var(--amber); border-color: var(--amber-border); background: var(--amber-dim); }
+
+/* ─── POLICY TABLE ─── */
+.policy-table { width: 100%; border-collapse: collapse; }
+.policy-table th {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border2);
+}
+.policy-table td {
+  padding: 14px 16px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.6;
+}
+.policy-table tr:last-child td { border-bottom: none; }
+.policy-table tr:hover td { background: var(--surface2); }
+.policy-table td:first-child { color: #fff; font-weight: 500; }
+.policy-table td:nth-child(2) {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--amber);
+}
+.policy-table td:nth-child(3) { color: var(--muted); }
+.status-dot {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.dot-red { background: var(--coral); }
+.dot-amber { background: var(--amber); }
+.dot-green { background: var(--green); }
+
+/* ─── PRODUCT TABLE ─── */
+.product-table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); }
+.product-table { width: 100%; border-collapse: collapse; min-width: 900px; }
+.product-table thead { background: var(--surface2); }
+.product-table th {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 12px 16px;
+  text-align: left;
+  white-space: nowrap;
+}
+.product-table td {
+  padding: 14px 16px;
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+  vertical-align: middle;
+  line-height: 1.5;
+}
+.product-table tr:hover td { background: rgba(255,255,255,0.02); }
+.brand-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.brand-name-cell {
+  font-weight: 500;
+  color: #fff;
+  font-size: 13px;
+}
+.brand-product-cell {
+  font-size: 11px;
+  color: var(--muted);
+}
+.price-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--amber);
+  white-space: nowrap;
+}
+.kp-tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 2px 1px;
+  white-space: nowrap;
+}
+.kp-green { background: var(--green-dim); color: var(--green); }
+.kp-teal  { background: var(--teal-dim);  color: var(--teal); }
+.kp-amber { background: var(--amber-dim); color: var(--amber); }
+.kp-violet{ background: var(--violet-dim); color: var(--violet); }
+.kp-coral { background: var(--coral-dim); color: var(--coral); }
+.product-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--teal);
+  text-decoration: none;
+  padding: 4px 8px;
+  border: 1px solid var(--teal-border);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.product-link:hover { background: var(--teal-dim); }
+
+/* ─── BRAND CARDS ─── */
+.brand-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.brand-card:hover { border-color: var(--border2); }
+.brand-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+}
+.brand-card.amber::before { background: var(--amber); }
+.brand-card.teal::before  { background: var(--teal); }
+.brand-card.violet::before { background: var(--violet); }
+.brand-card.coral::before { background: var(--coral); }
+.brand-card.green::before { background: var(--green); }
+.brand-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+.brand-header-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+.brand-header-parent { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.heat-indicator {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.heat-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--dim);
+}
+.heat-dot.on { background: var(--amber); }
+.brand-card p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* ─── BAR CHART ─── */
+.bar-chart { display: flex; flex-direction: column; gap: 12px; }
+.bar-row { display: flex; align-items: center; gap: 12px; }
+.bar-label {
+  font-size: 12px;
+  color: var(--muted);
+  min-width: 160px;
+  white-space: nowrap;
+}
+.bar-track {
+  flex: 1;
+  height: 6px;
+  background: var(--surface2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+.bar-val {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  min-width: 40px;
+  text-align: right;
+}
+
+/* ─── TREND GRID ─── */
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.trend-icon { font-size: 22px; line-height: 1; }
+.trend-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+}
+.trend-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.trend-meter {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+.meter-seg {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--dim);
+}
+.meter-seg.on { background: var(--amber); }
+
+/* ─── CONSUMER QUOTES ─── */
+.quote-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 12px 12px 0;
+  padding: 20px 24px;
+}
+.quote-text {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.quote-zh {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.quote-source {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--teal);
+  margin-top: 8px;
+  letter-spacing: 0.06em;
+}
+
+/* ─── GAP ANALYSIS ─── */
+.gap-item {
+  display: grid;
+  grid-template-columns: 220px 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  align-items: start;
+}
+.gap-item:last-child { border-bottom: none; }
+.gap-item-label {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  padding-right: 20px;
+}
+.gap-item-now { font-size: 13px; color: var(--muted); padding-right: 20px; line-height: 1.6; }
+.gap-item-opp { font-size: 13px; color: var(--teal); line-height: 1.6; }
+
+/* ─── STRATEGIC TIPS ─── */
+.tip-row {
+  display: flex;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+  transition: border-color 0.2s;
+}
+.tip-row:hover { border-color: var(--border2); }
+.tip-row.go { border-left: 3px solid var(--green); }
+.tip-row.warn { border-left: 3px solid var(--coral); }
+.tip-row.idea { border-left: 3px solid var(--violet); }
+.tip-icon {
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.tip-title { font-size: 14px; font-weight: 500; color: #fff; margin-bottom: 4px; }
+.tip-body { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ─── SOURCES ─── */
+.source-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.source-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.source-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); flex-shrink: 0; }
+.source-info { min-width: 0; }
+.source-title { font-size: 13px; color: var(--text); font-weight: 500; margin-bottom: 2px; }
+.source-url {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--teal);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.source-type { font-size: 10px; color: var(--muted); }
+
+/* ─── FOOTER ─── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  margin-top: 40px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-brand { font-family: 'Syne', sans-serif; font-size: 13px; color: var(--muted); }
+.footer-meta { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--dim); text-align: right; line-height: 1.8; }
+
+/* ─── DIVIDER ─── */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border2), transparent);
+  margin: 32px 0;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-title, .hero-desc, .hero-stats { animation: fadeUp 0.7s ease both; }
+.hero-eyebrow { animation: fadeUp 0.5s ease both; }
+.hero-desc { animation-delay: 0.1s; }
+.hero-stats { animation-delay: 0.2s; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .wrapper { padding: 0 20px; }
+  .card-grid-2 { grid-template-columns: 1fr; }
+  .card-grid-3 { grid-template-columns: 1fr 1fr; }
+  .card-grid-4 { grid-template-columns: 1fr 1fr; }
+  .exec-grid { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: 1fr 1fr; }
+  .gap-item { grid-template-columns: 1fr; gap: 4px; }
+  .source-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .card-grid-3 { grid-template-columns: 1fr; }
+  .card-grid-4 { grid-template-columns: 1fr 1fr; }
+  .hero-stats { grid-template-columns: 1fr 1fr; }
+  .hero-bg-text { display: none; }
+  .footer-inner { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .masthead-right { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── STICKY MASTHEAD ─── -->
+<div class="masthead">
+  <div class="wrapper">
+    <div class="masthead-inner">
+      <div class="masthead-left">
+        <div class="flag-badge">🇬🇧</div>
+        <div>
+          <div class="masthead-title">UK Nicotine Market Intelligence</div>
+          <div class="masthead-sub">英国尼古丁市场深度竞品快报 · 2026 Q1–Q2</div>
+        </div>
+      </div>
+      <div class="masthead-right">
+        <span class="pill pill-amber">近三月核心新品</span>
+        <span class="pill pill-teal">Vape + Pouch</span>
+        <span class="pill pill-muted">Apr 2026</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── NAV ─── -->
+<div class="nav-bar">
+  <div class="wrapper">
+    <div class="nav-inner">
+      <a href="#summary"  class="nav-item active">执行摘要</a>
+      <a href="#policy"   class="nav-item">政策合规</a>
+      <a href="#brands"   class="nav-item">TOP品牌</a>
+      <a href="#products" class="nav-item">核心新品表</a>
+      <a href="#trends"   class="nav-item">新品趋势</a>
+      <a href="#marketing" class="nav-item">营销洞察</a>
+      <a href="#strategy" class="nav-item">出海策略</a>
+      <a href="#sources"  class="nav-item">信息来源</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─── HERO ─── -->
+<div class="hero">
+  <div class="wrapper">
+    <div class="hero-bg-text">UK</div>
+    <div class="hero-eyebrow">Vape &amp; Pouch Insights Expert · London</div>
+    <h1 class="hero-title">英国尼古丁市场<br><span>竞品深度快报</span></h1>
+    <p class="hero-desc">一次性烟弹禁令落地后的市场重构全景，覆盖近三个月核心新品发布、口味趋势、价格动态及出海战略建议。数据来源：英国本地电商、政府公告及消费者社区。</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-val">-12.7%</div>
+        <div class="hero-stat-label">便利店电子烟销售额同比</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">25K</div>
+        <div class="hero-stat-label">新旗舰设备口数上限</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">£2.20</div>
+        <div class="hero-stat-label">Oct 2026 烟油税/10ml</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">+728%</div>
+        <div class="hero-stat-label">Pouch品类季度增速峰值</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SECTION 1: EXECUTIVE SUMMARY ════════ -->
+<div id="summary" class="section">
+  <div class="wrapper">
+    <div class="section-tag">01 / Executive Summary</div>
+    <h2 class="section-title">执行摘要</h2>
+
+    <div class="exec-grid">
+      <div>
+        <div class="finding-box" style="margin-bottom:20px;">
+          <h3>本季核心发现</h3>
+          <p>这是一个<strong style="color:#fff;">格式迁移完成月</strong>——消费者从一次性烟弹到预充弹仓式（Pre-filled Pod Kit）的过渡基本定型。大口数（6K-35K puffs）成为新标准，双口味扭转系统（Dual-Flavour Twist）成为2026年最大产品创新卖点。尼古丁袋品类爆炸性增长，FUMi以大胆口味姿态登陆英国市场，改写高端Pouch竞争格局。</p>
+        </div>
+
+        <div class="card">
+          <h3 style="font-family:'Syne',sans-serif;font-size:14px;color:#fff;margin-bottom:16px;">重大新闻脉络（近三月三大事件）</h3>
+          <ul class="news-list">
+            <li class="news-item">
+              <span class="news-num">01</span>
+              <div class="news-content">
+                <h4>预充弹仓格式主导地位确立</h4>
+                <p>Pod系统从15%份额跃升至25%，超过2,000个新产品条形码在2025年注册。Lost Mary BM6000与Hayati Pro Ultra Plus 25K成为禁令后的市场双雄，直接替代了原来的一次性烟弹消费场景。</p>
+              </div>
+            </li>
+            <li class="news-item">
+              <span class="news-num">02</span>
+              <div class="news-content">
+                <h4>烟油消费税（VPD）倒计时效应启动</h4>
+                <p>2026年10月1日起，£2.20/10ml税率正式落地。注册申请已于2026年4月1日开放。品牌和零售商开始大量税前囤货，预计Q3出现集中备货潮。</p>
+              </div>
+            </li>
+            <li class="news-item">
+              <span class="news-num">03</span>
+              <div class="news-content">
+                <h4>Altria FUMi携"大胆口味"登陆英国</h4>
+                <p>FUMi以£4.49/罐（比VELO低10%）的挑战者定价入市，9种独特口味（Salty Raspberry、Zingy Ginger、Prickly Pear）开辟差异化赛道，尼古丁袋市场竞争进入三强格局。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="card" style="height:100%;">
+          <h3 style="font-family:'Syne',sans-serif;font-size:14px;color:#fff;margin-bottom:16px;">热度关键词</h3>
+          <div class="tags-cloud">
+            <span class="tag">#BigPuffVapes</span>
+            <span class="tag">#PrefillPodKit</span>
+            <span class="tag">#DualFlavourTwist</span>
+            <span class="tag">#VapingProductsDuty</span>
+            <span class="tag">#FruitIceDominance</span>
+            <span class="tag">#LostMaryBM6000</span>
+            <span class="tag">#HayatiProUltraPlus</span>
+            <span class="tag">#NicotinePouches</span>
+            <span class="tag">#TPDCompliant</span>
+            <span class="tag">#SmokeFreeGeneration</span>
+          </div>
+          <div class="divider"></div>
+          <h3 style="font-family:'Syne',sans-serif;font-size:14px;color:#fff;margin-bottom:16px;">市场关键数据速查</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);">
+              <span style="font-size:13px;color:var(--muted);">便利店销售额同比</span>
+              <span style="font-family:'DM Mono',monospace;font-size:13px;color:var(--coral);">-12.7%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);">
+              <span style="font-size:13px;color:var(--muted);">便利店单位销量同比</span>
+              <span style="font-family:'DM Mono',monospace;font-size:13px;color:var(--coral);">-20.8%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);">
+              <span style="font-size:13px;color:var(--muted);">Pod系统市场份额</span>
+              <span style="font-family:'DM Mono',monospace;font-size:13px;color:var(--green);">25% (↑+10pp)</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);">
+              <span style="font-size:13px;color:var(--muted);">水果口味占比</span>
+              <span style="font-family:'DM Mono',monospace;font-size:13px;color:var(--amber);">50%+</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);">
+              <span style="font-size:13px;color:var(--muted);">每周可充电小烟销量</span>
+              <span style="font-family:'DM Mono',monospace;font-size:13px;color:var(--teal);">~150万台</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;">
+              <span style="font-size:13px;color:var(--muted);">新品注册条形码数</span>
+              <span style="font-family:'DM Mono',monospace;font-size:13px;color:var(--amber);">2,000+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SECTION 2: POLICY ════════ -->
+<div id="policy" class="section">
+  <div class="wrapper">
+    <div class="section-tag">02 / Regulatory & Tax</div>
+    <h2 class="section-title">政策与 <span class="accent">合规</span></h2>
+
+    <div class="card" style="overflow:hidden;padding:0;">
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>政策事项</th>
+            <th>生效时间</th>
+            <th>状态</th>
+            <th>对产品/营销的直接影响</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>一次性电子烟全面禁售</td>
+            <td>2025年6月1日</td>
+            <td><span class="status-dot dot-red"></span><span style="color:var(--coral);font-size:11px;">已生效</span></td>
+            <td style="color:var(--muted);">强制产品格式迁移至可充电Pod系统；品牌需主打"可充电/可替换"属性；Crystal Bar、Elf Bar等原一次性烟弹巨头加速推出替代品</td>
+          </tr>
+          <tr>
+            <td>烟油消费税（VPD）£2.20/10ml</td>
+            <td>2026年10月1日</td>
+            <td><span class="status-dot dot-amber"></span><span style="color:var(--amber);font-size:11px;">即将生效</span></td>
+            <td style="color:var(--muted);">含VAT实际涨幅约£2.64/10ml；Nic Salts、预充弹仓、Shortfill均适用；硬件设备不受影响；2ml Pod税额最低仅£0.44</td>
+          </tr>
+          <tr>
+            <td>烟油税务印花制度（VDS）</td>
+            <td>2026年10月起制造/进口须加贴</td>
+            <td><span class="status-dot dot-amber"></span><span style="color:var(--amber);font-size:11px;">准备中</span></td>
+            <td style="color:var(--muted);">2027年4月1日后无印花产品售卖将构成刑事犯罪；HMRC审批最长需45工作日，进口商需提前申请</td>
+          </tr>
+          <tr>
+            <td>Tobacco &amp; Vapes Bill（口味限制条款）</td>
+            <td>待二次立法，正在公众咨询</td>
+            <td><span class="status-dot dot-green"></span><span style="color:var(--green);font-size:11px;">现有口味安全</span></td>
+            <td style="color:var(--muted);">监管者保留通过次级立法限制口味的权力；任何变动须公众咨询；短期内水果口味不受影响，需密切关注</td>
+          </tr>
+          <tr>
+            <td>尼古丁袋（Pouch）监管</td>
+            <td>暂按普通消费品管理</td>
+            <td><span class="status-dot dot-green"></span><span style="color:var(--green);font-size:11px;">目前无税</span></td>
+            <td style="color:var(--muted);">不纳入VPD范围（政府咨询后决定）；但Tobacco &amp; Vapes Bill保留未来审查条款；当前是布局Pouch市场的税收洼地窗口期</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:20px;padding:20px;background:rgba(245,166,35,0.06);border:1px solid var(--amber-border);border-radius:12px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--amber);letter-spacing:0.1em;margin-bottom:10px;">▶ EXPERT NOTE</div>
+      <p style="font-size:14px;line-height:1.8;color:var(--text);">2026年10月税收冲击将重塑成本结构。对<strong style="color:#fff;">预充Pod</strong>来说，每个2ml弹仓仅多交£0.44税，冲击温和；但<strong style="color:#fff;">Shortfill（100ml）</strong>将多缴£26.40税，大容量烟油性价比急剧下降，其份额将向小容量Pod集中。这是中国出海品牌提前押注Pod格式的战略窗口。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SECTION 3: TOP BRANDS ════════ -->
+<div id="brands" class="section">
+  <div class="wrapper">
+    <div class="section-tag">03 / Competitor Monitor</div>
+    <h2 class="section-title">TOP 品牌 <span class="accent">动向</span></h2>
+
+    <!-- Vape Brands -->
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">电子烟品牌 · Vape Devices</div>
+    <div class="card-grid-3" style="margin-bottom:40px;">
+      <div class="brand-card amber">
+        <div class="brand-header">
+          <div>
+            <div class="brand-header-name">Lost Mary</div>
+            <div class="brand-header-parent">Imiracle (Elfbar母公司)</div>
+          </div>
+          <div class="heat-indicator">
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+          </div>
+        </div>
+        <p>禁令后最热品牌。BM6000系列以<strong style="color:#fff;">41种口味</strong>、QUAQ Mesh线圈、可拆卸电池全面替代原一次性烟弹体验。多家零售商反馈"补货跟不上"。2026年进一步推出Nera 30K（30,000口）升级旗舰。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="kp-tag kp-amber">6K-30K 口数</span>
+          <span class="kp-tag kp-green">41种口味</span>
+          <span class="kp-tag kp-teal">可拆卸电池</span>
+        </div>
+      </div>
+      <div class="brand-card teal">
+        <div class="brand-header">
+          <div>
+            <div class="brand-header-name">Hayati</div>
+            <div class="brand-header-parent">UK本土品牌</div>
+          </div>
+          <div class="heat-indicator">
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+          </div>
+        </div>
+        <p>以<strong style="color:#fff;">双口味扭转系统</strong>颠覆市场。Pro Ultra Plus 25K每个弹仓两个10ml独立腔，旋转即换口味，无需更换弹仓，定价£10.99（3件£30），性价比极强。重度用户首选。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="kp-tag kp-teal">25,000口数</span>
+          <span class="kp-tag kp-violet">双口味旋转</span>
+          <span class="kp-tag kp-amber">850mAh+</span>
+        </div>
+      </div>
+      <div class="brand-card violet">
+        <div class="brand-header">
+          <div>
+            <div class="brand-header-name">IVG</div>
+            <div class="brand-header-parent">I Vape Great · 英国本土研发</div>
+          </div>
+          <div class="heat-indicator">
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot"></div>
+          </div>
+        </div>
+        <p>4合1旋转弹仓系统（4-in-1 Rotating Pod）是核心创新，50+口味组合可以无限拼配。英国本地研发生产，消费者信任度高。XL 35K以35,000口数冲击行业上限。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="kp-tag kp-violet">4合1旋转</span>
+          <span class="kp-tag kp-green">35,000口数</span>
+          <span class="kp-tag kp-teal">英国本土</span>
+        </div>
+      </div>
+      <div class="brand-card coral">
+        <div class="brand-header">
+          <div>
+            <div class="brand-header-name">OXVA</div>
+            <div class="brand-header-parent">高端可充电Kit</div>
+          </div>
+          <div class="heat-indicator">
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot"></div>
+          </div>
+        </div>
+        <p>XLIM Pro 3以<strong style="color:#fff;">Photon芯片</strong>技术立威：20%电量时仍维持80%口感输出；2.2" HD触控屏；兼容所有历代XLIM弹仓。测评结果2026年口味表现第一名。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="kp-tag kp-coral">Photon芯片</span>
+          <span class="kp-tag kp-amber">触控屏</span>
+          <span class="kp-tag kp-green">最佳口感</span>
+        </div>
+      </div>
+      <div class="brand-card green">
+        <div class="brand-header">
+          <div>
+            <div class="brand-header-name">Vaporesso</div>
+            <div class="brand-header-parent">Smoore旗下</div>
+          </div>
+          <div class="heat-indicator">
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot"></div>
+            <div class="heat-dot"></div>
+          </div>
+        </div>
+        <p>Dojo Blast 10K凭借10ml大容量、圆润手感和轻量化设计，成为测评机构推荐的"最平衡选择"。XROS 5系列在可充电Kit品类中维持稳健市场份额。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="kp-tag kp-green">10ml容量</span>
+          <span class="kp-tag kp-teal">轻量化</span>
+          <span class="kp-tag kp-amber">均衡之选</span>
+        </div>
+      </div>
+      <div class="brand-card" style="border-color:var(--border2);">
+        <div class="brand-header">
+          <div>
+            <div class="brand-header-name">Hyola / SKE / Al Fakher</div>
+            <div class="brand-header-parent">新兴品牌群</div>
+          </div>
+          <div class="heat-indicator">
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot"></div>
+            <div class="heat-dot"></div>
+          </div>
+        </div>
+        <p>Hyola Ultra 30K（30K口+双口味）、SKE Crystal Pod（原Crystal Bar视觉基因延续）、Al Fakher Crown 30K等新品牌快速填补禁令后市场缺口，主打视觉差异化和口味宽度。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="kp-tag kp-violet">新进品牌</span>
+          <span class="kp-tag kp-amber">视觉差异化</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pouch Brands -->
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;margin-top:8px;">尼古丁袋品牌 · Nicotine Pouches</div>
+    <div class="card-grid-3">
+      <div class="brand-card amber">
+        <div class="brand-header">
+          <div>
+            <div class="brand-header-name">VELO</div>
+            <div class="brand-header-parent">British American Tobacco (BAT)</div>
+          </div>
+          <div class="heat-indicator">
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+          </div>
+        </div>
+        <p>英国Pouch市场绝对第一。4-17mg全浓度覆盖，Freezing Peppermint 17mg是行业独家高浓度口味。2026年4月推出积分忠诚系统VELO+ Points；McLaren F1赞助提升品牌势能。定价£4.99/罐。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="kp-tag kp-amber">市场第一</span>
+          <span class="kp-tag kp-green">4-17mg</span>
+          <span class="kp-tag kp-teal">积分系统</span>
+        </div>
+      </div>
+      <div class="brand-card violet">
+        <div class="brand-header">
+          <div>
+            <div class="brand-header-name">ZYN</div>
+            <div class="brand-header-parent">Philip Morris International</div>
+          </div>
+          <div class="heat-indicator">
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot"></div>
+          </div>
+        </div>
+        <p>以1.5mg超低浓度入门区间称霸。Premium Mix新系列推出Guava Spice、Red Fruits、Apple Mint、Icy Blackcurrant，在口味深度上向VELO追赶。Cool Mint是全线最畅销SKU。定价£5-6/罐。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="kp-tag kp-violet">入门首选</span>
+          <span class="kp-tag kp-teal">Premium Mix</span>
+          <span class="kp-tag kp-amber">1.5-13.5mg</span>
+        </div>
+      </div>
+      <div class="brand-card coral">
+        <div class="brand-header">
+          <div>
+            <div class="brand-header-name">FUMi <span style="font-size:11px;color:var(--amber);font-weight:400;">新品</span></div>
+            <div class="brand-header-parent">Altria旗下 Helix Sweden AB</div>
+          </div>
+          <div class="heat-indicator">
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot on"></div>
+            <div class="heat-dot"></div>
+            <div class="heat-dot"></div>
+          </div>
+        </div>
+        <p>2025年5月登陆英国，以"大胆口味"差异化挑战主流。9种独特口味：Salty Raspberry（咸味覆盆子）、Zingy Ginger（姜汁）、Prickly Pear（仙人掌果）等，色码罐身设计。定价£4.49/罐（比VELO低10%）。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="kp-tag kp-coral">大胆口味</span>
+          <span class="kp-tag kp-amber">挑战者定价</span>
+          <span class="kp-tag kp-green">色码设计</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SECTION 4: PRODUCT TABLE ════════ -->
+<div id="products" class="section">
+  <div class="wrapper">
+    <div class="section-tag">04 / New Products</div>
+    <h2 class="section-title">近三月 <span class="accent">核心新品</span> 参数表</h2>
+    <div class="product-table-wrap">
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>品牌 / 产品</th>
+            <th>口味 / 浓度</th>
+            <th>核心卖点</th>
+            <th>价格 (GBP)</th>
+            <th>产品链接</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="brand-cell">
+                <div class="brand-name-cell">Lost Mary</div>
+                <div class="brand-product-cell">BM6000 Pre-filled Kit</div>
+              </div>
+            </td>
+            <td><span style="color:var(--text);">41种口味</span><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amber);">20mg Nic Salt</span></td>
+            <td>
+              <span class="kp-tag kp-green">6K口数</span>
+              <span class="kp-tag kp-teal">QUAQ Mesh线圈</span>
+              <span class="kp-tag kp-amber">12ml总容量</span>
+              <span class="kp-tag kp-violet">USB-C快充</span>
+              <span class="kp-tag kp-teal">可拆卸电池</span>
+            </td>
+            <td><span class="price-tag">Kit £7.99-£11.99<br>Pods £6.99-£7.99</span></td>
+            <td><a href="https://ecigone.co.uk/lost-mary-bm6000" target="_blank" class="product-link">ecigone ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="brand-cell">
+                <div class="brand-name-cell">Lost Mary</div>
+                <div class="brand-product-cell">Nera 30K</div>
+              </div>
+            </td>
+            <td><span style="color:var(--text);">多口味</span><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amber);">20mg</span></td>
+            <td>
+              <span class="kp-tag kp-amber">30,000口数</span>
+              <span class="kp-tag kp-teal">Turbo Mode</span>
+              <span class="kp-tag kp-violet">高级显示屏</span>
+            </td>
+            <td><span class="price-tag">~£15-18</span></td>
+            <td><a href="https://www.ecigarettedirect.co.uk/blogs/ashtray-blog/best-big-puff-vapes" target="_blank" class="product-link">EcigaretteDirect ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="brand-cell">
+                <div class="brand-name-cell">Hayati</div>
+                <div class="brand-product-cell">Pro Ultra Plus 25K</div>
+              </div>
+            </td>
+            <td><span style="color:var(--text);">25+口味组合</span><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amber);">20mg Nic Salt</span></td>
+            <td>
+              <span class="kp-tag kp-amber">双口味扭转系统</span>
+              <span class="kp-tag kp-green">25,000口数</span>
+              <span class="kp-tag kp-teal">850mAh</span>
+              <span class="kp-tag kp-violet">智能LED屏</span>
+              <span class="kp-tag kp-coral">金属外壳</span>
+            </td>
+            <td><span class="price-tag">Kit £10.99<br>3件£30 / Pods £6.65</span></td>
+            <td><a href="https://www.ninja-vapes.co.uk/product/hayati-pro-ultra-tpd" target="_blank" class="product-link">Ninja Vapes ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="brand-cell">
+                <div class="brand-name-cell">IVG</div>
+                <div class="brand-product-cell">Pro 12 (10K)</div>
+              </div>
+            </td>
+            <td><span style="color:var(--text);">多口味</span><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amber);">20mg</span></td>
+            <td>
+              <span class="kp-tag kp-teal">1000mAh</span>
+              <span class="kp-tag kp-green">数字电量%显示</span>
+              <span class="kp-tag kp-amber">10ml可视弹仓</span>
+            </td>
+            <td><span class="price-tag">~£12-15</span></td>
+            <td><a href="https://www.ecigarettedirect.co.uk/blogs/ashtray-blog/best-big-puff-vapes" target="_blank" class="product-link">EcigaretteDirect ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="brand-cell">
+                <div class="brand-name-cell">IVG</div>
+                <div class="brand-product-cell">XL 35K</div>
+              </div>
+            </td>
+            <td><span style="color:var(--text);">多口味系列</span><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amber);">20mg</span></td>
+            <td>
+              <span class="kp-tag kp-amber">35,000口数行业最高</span>
+              <span class="kp-tag kp-green">自动续液</span>
+            </td>
+            <td><span class="price-tag">~£18-22</span></td>
+            <td><a href="https://evapo.co.uk/blog/best-vape-brands" target="_blank" class="product-link">Evapo ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="brand-cell">
+                <div class="brand-name-cell">OXVA</div>
+                <div class="brand-product-cell">XLIM Pro 3</div>
+              </div>
+            </td>
+            <td><span style="color:var(--text);">兼容全系Xlim Pod</span><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amber);">可选10/20mg</span></td>
+            <td>
+              <span class="kp-tag kp-coral">Photon芯片</span>
+              <span class="kp-tag kp-teal">80%口感保持</span>
+              <span class="kp-tag kp-violet">2.2"触控屏</span>
+              <span class="kp-tag kp-green">1500mAh</span>
+            </td>
+            <td><span class="price-tag">£25-35</span></td>
+            <td><a href="https://ecigone.co.uk" target="_blank" class="product-link">Ecigone ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="brand-cell">
+                <div class="brand-name-cell">Vaporesso</div>
+                <div class="brand-product-cell">Dojo Blast 10K</div>
+              </div>
+            </td>
+            <td><span style="color:var(--text);">多口味</span><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amber);">20mg</span></td>
+            <td>
+              <span class="kp-tag kp-green">10ml大容量</span>
+              <span class="kp-tag kp-teal">轻量圆润</span>
+              <span class="kp-tag kp-amber">MTL宽松喉感</span>
+            </td>
+            <td><span class="price-tag">~£12-16</span></td>
+            <td><a href="https://www.ecigarettedirect.co.uk" target="_blank" class="product-link">EcigaretteDirect ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="brand-cell">
+                <div class="brand-name-cell">ZYN</div>
+                <div class="brand-product-cell">Premium Mix 系列</div>
+              </div>
+            </td>
+            <td><span style="color:var(--text);">Guava Spice / Red Fruits<br>Apple Mint / Icy Blackcurrant</span><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amber);">1.5-13.5mg</span></td>
+            <td>
+              <span class="kp-tag kp-violet">新口味扩展</span>
+              <span class="kp-tag kp-teal">全浓度覆盖</span>
+              <span class="kp-tag kp-amber">入门友好</span>
+            </td>
+            <td><span class="price-tag">£5-6/罐</span></td>
+            <td><a href="https://nicpouches.com" target="_blank" class="product-link">NicPouches ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="brand-cell">
+                <div class="brand-name-cell">VELO</div>
+                <div class="brand-product-cell">旗舰系列 + 积分促销</div>
+              </div>
+            </td>
+            <td><span style="color:var(--text);">Ruby Berry / Tropical Mango<br>Elderflower Spritz等20+种</span><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amber);">4-17mg</span></td>
+            <td>
+              <span class="kp-tag kp-amber">VELO+ Points</span>
+              <span class="kp-tag kp-coral">F1赞助背书</span>
+              <span class="kp-tag kp-green">最广浓度区间</span>
+            </td>
+            <td><span class="price-tag">£4.99/罐</span></td>
+            <td><a href="https://www.velo.com/gb/en" target="_blank" class="product-link">velo.com ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="brand-cell">
+                <div class="brand-name-cell">FUMi <span style="color:var(--amber);font-size:10px;">新品</span></div>
+                <div class="brand-product-cell">Nicotine Pouches (Altria)</div>
+              </div>
+            </td>
+            <td><span style="color:var(--text);">9种：Salty Raspberry / Freezy Mint<br>Fiery Mango / Zingy Ginger / Prickly Pear等</span><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amber);">4mg / 8mg / 11mg</span></td>
+            <td>
+              <span class="kp-tag kp-coral">大胆创意口味</span>
+              <span class="kp-tag kp-teal">Slim湿润format</span>
+              <span class="kp-tag kp-amber">色码罐身</span>
+              <span class="kp-tag kp-green">挑战者定价</span>
+            </td>
+            <td><span class="price-tag">£3.30-4.49/罐<br>（导入期£0.99）</span></td>
+            <td><a href="https://www.haypp.com/uk/nicotine-pouches/fumi" target="_blank" class="product-link">Haypp ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="brand-cell">
+                <div class="brand-name-cell">Nordic Spirit</div>
+                <div class="brand-product-cell">全系列</div>
+              </div>
+            </td>
+            <td><span style="color:var(--text);">Mint / Berry / Citrus等</span><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amber);">轻-中-强 浓度</span></td>
+            <td>
+              <span class="kp-tag kp-teal">入门友好</span>
+              <span class="kp-tag kp-violet">JTI背书</span>
+              <span class="kp-tag kp-amber">超市可见度高</span>
+            </td>
+            <td><span class="price-tag">£4.50-5.50/罐</span></td>
+            <td><a href="https://www.vapesuperstore.co.uk" target="_blank" class="product-link">Vape Superstore ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SECTION 5: TRENDS ════════ -->
+<div id="trends" class="section">
+  <div class="wrapper">
+    <div class="section-tag">05 / New Product Trends</div>
+    <h2 class="section-title">近三月 <span class="accent">新品趋势</span> 分析</h2>
+
+    <!-- Flavour Trends -->
+    <div style="margin-bottom:40px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">口味趋势 · Flavour Trends</div>
+      <div class="card">
+        <div class="bar-chart">
+          <div class="bar-row">
+            <div class="bar-label">水果+冰 (Fruit Ice)</div>
+            <div class="bar-track"><div class="bar-fill" style="width:92%;background:var(--teal);"></div></div>
+            <div class="bar-val">92%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">复合创意口味</div>
+            <div class="bar-track"><div class="bar-fill" style="width:68%;background:var(--violet);"></div></div>
+            <div class="bar-val">68%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">经典薄荷/Menthol</div>
+            <div class="bar-track"><div class="bar-fill" style="width:55%;background:var(--amber);"></div></div>
+            <div class="bar-val">55%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">糖果/甜品类</div>
+            <div class="bar-track"><div class="bar-fill" style="width:42%;background:var(--coral);"></div></div>
+            <div class="bar-val">42%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">烟草口味</div>
+            <div class="bar-track"><div class="bar-fill" style="width:11%;background:var(--dim);"></div></div>
+            <div class="bar-val">11%</div>
+          </div>
+        </div>
+        <div style="margin-top:16px;font-size:12px;color:var(--muted);padding-top:16px;border-top:1px solid var(--border);">
+          *口味热度基于英国主要电商平台SKU分布及消费者评价频次综合估算。烟草口味占比已从2016年33%降至2025年11%。
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Trends -->
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">设备技术趋势 · Device Tech Trends</div>
+    <div class="card-grid-2" style="margin-bottom:40px;">
+      <div class="trend-item">
+        <div class="trend-icon">🔄</div>
+        <div class="trend-name">双口味扭转系统</div>
+        <div class="trend-desc">Hayati Pro Ultra Plus 25K引领，Hyola Ultra 30K跟进。两个独立腔体，旋转切换，无需更换弹仓——这是2026年最显著的产品创新点，也是区别于一次性烟弹的超越体验。</div>
+        <div class="trend-meter">
+          <div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div>
+        </div>
+        <div style="font-size:11px;color:var(--amber);">★ 年度最大创新卖点</div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-icon">📈</div>
+        <div class="trend-name">口数军备竞赛</div>
+        <div class="trend-desc">6K → 15K → 25K → 35K，行业口数上限每季刷新。IVG XL 35K是目前英国市场最高口数TPD合规设备。重度用户月均消耗成本已降至每月£20-30（原来£50+）。</div>
+        <div class="trend-meter">
+          <div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg"></div>
+        </div>
+        <div style="font-size:11px;color:var(--teal);">↑ 持续升级中</div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-icon">📱</div>
+        <div class="trend-name">智能显示屏标配化</div>
+        <div class="trend-desc">LED电量+烟油余量显示已成中高端标配；触控屏（OXVA XLIM Pro 3：2.2" HD）开始走入主流。消费者对"知道剩多少"需求极强，可视化烟油仓也成为差异化亮点。</div>
+        <div class="trend-meter">
+          <div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg"></div>
+        </div>
+        <div style="font-size:11px;color:var(--violet);">科技感驱动溢价</div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-icon">🌱</div>
+        <div class="trend-name">可持续/环保营销</div>
+        <div class="trend-desc">可拆卸电池（Lost Mary BM6000）、标准USB-C充电、"减少90%废弃物"成为主要传播点。禁令本身就是最好的环保营销背书——用户被迫转型，但品牌可以把它变成价值观认同。</div>
+        <div class="trend-meter">
+          <div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg"></div><div class="meter-seg"></div>
+        </div>
+        <div style="font-size:11px;color:var(--green);">合规+ESG双杠杆</div>
+      </div>
+    </div>
+
+    <!-- Pouch Trends -->
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">尼古丁袋趋势 · Pouch Trends</div>
+    <div class="card-grid-3">
+      <div class="trend-item">
+        <div class="trend-icon">💥</div>
+        <div class="trend-name">大胆口味差异化</div>
+        <div class="trend-desc">FUMi带来全新口味哲学：咸味（Salty）+辛辣（Zingy）+异域（Prickly Pear）组合，彻底跳出ZYN/VELO"薄荷+水果"的传统框架，吸引口味探索型用户。</div>
+        <div class="trend-meter">
+          <div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg"></div><div class="meter-seg"></div>
+        </div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-icon">🎨</div>
+        <div class="trend-name">色码包装设计语言</div>
+        <div class="trend-desc">FUMi为每种口味匹配独立罐身颜色（紫色=Salty Violet），向美妆行业借鉴的包装思维，让货架辨识度极高。这一趋势预计将被其他Pouch品牌跟进。</div>
+        <div class="trend-meter">
+          <div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg"></div><div class="meter-seg"></div>
+        </div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-icon">📉</div>
+        <div class="trend-name">10mg浓度成长点</div>
+        <div class="trend-desc">30%英国用户在主动降低尼古丁浓度，10mg区间用户快速增长。ZYN在1.5-6mg入门区间优势明显；中间浓度（8-10mg）仍是人群最大的"甜蜜点"，新品布局不足。</div>
+        <div class="trend-meter">
+          <div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg on"></div><div class="meter-seg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SECTION 6: MARKETING ════════ -->
+<div id="marketing" class="section">
+  <div class="wrapper">
+    <div class="section-tag">06 / Marketing Insights</div>
+    <h2 class="section-title">营销洞察 <span class="accent">&amp; 消费者原声</span></h2>
+
+    <div class="card-grid-2" style="margin-bottom:32px;">
+      <div class="card">
+        <h3 style="font-family:'Syne',sans-serif;font-size:16px;color:#fff;margin-bottom:16px;">产品核心沟通卖点矩阵</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:var(--surface2);border-radius:8px;">
+            <div>
+              <div style="font-size:13px;color:#fff;font-weight:500;">大口数/长续航</div>
+              <div style="font-size:11px;color:var(--muted);">Hayati · IVG</div>
+            </div>
+            <div style="display:flex;gap:3px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);"></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:var(--surface2);border-radius:8px;">
+            <div>
+              <div style="font-size:13px;color:#fff;font-weight:500;">口味多样性</div>
+              <div style="font-size:11px;color:var(--muted);">Lost Mary · IVG</div>
+            </div>
+            <div style="display:flex;gap:3px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);"></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:var(--surface2);border-radius:8px;">
+            <div>
+              <div style="font-size:13px;color:#fff;font-weight:500;">无烟/无气味（Pouch）</div>
+              <div style="font-size:11px;color:var(--muted);">VELO · ZYN · FUMi</div>
+            </div>
+            <div style="display:flex;gap:3px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--teal);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--teal);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--teal);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--teal);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--teal);"></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:var(--surface2);border-radius:8px;">
+            <div>
+              <div style="font-size:13px;color:#fff;font-weight:500;">省钱/性价比</div>
+              <div style="font-size:11px;color:var(--muted);">全品牌</div>
+            </div>
+            <div style="display:flex;gap:3px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--violet);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--violet);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--violet);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--violet);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--dim);"></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:var(--surface2);border-radius:8px;">
+            <div>
+              <div style="font-size:13px;color:#fff;font-weight:500;">双口味便利</div>
+              <div style="font-size:11px;color:var(--muted);">Hayati · Hyola</div>
+            </div>
+            <div style="display:flex;gap:3px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--coral);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--coral);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--coral);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--coral);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--dim);"></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:var(--surface2);border-radius:8px;">
+            <div>
+              <div style="font-size:13px;color:#fff;font-weight:500;">高端科技感</div>
+              <div style="font-size:11px;color:var(--muted);">OXVA · Vaporesso</div>
+            </div>
+            <div style="display:flex;gap:3px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--green);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--green);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--green);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--dim);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--dim);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:16px;">
+          <h3 style="font-family:'Syne',sans-serif;font-size:16px;color:#fff;margin-bottom:16px;">社交媒体趋势</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="padding:12px;background:var(--surface2);border-radius:8px;border-left:2px solid var(--amber);">
+              <div style="font-size:13px;color:#fff;font-weight:500;margin-bottom:4px;">📹 YouTube/TikTok 热门格式</div>
+              <div style="font-size:12px;color:var(--muted);">"How Long Does It Actually Last" 真实口数测试——最高流量内容格式；对比视频（BM6000 vs Hayati 25K）互动率极高</div>
+            </div>
+            <div style="padding:12px;background:var(--surface2);border-radius:8px;border-left:2px solid var(--teal);">
+              <div style="font-size:13px;color:#fff;font-weight:500;margin-bottom:4px;">📸 Pouch品牌场景营销</div>
+              <div style="font-size:12px;color:var(--muted);">"Anytime Anywhere"——办公室、机场、演唱会等"禁烟场景"是Pouch最强的传播锚点</div>
+            </div>
+            <div style="padding:12px;background:var(--surface2);border-radius:8px;border-left:2px solid var(--violet);">
+              <div style="font-size:13px;color:#fff;font-weight:500;margin-bottom:4px;">🎨 包装审美趋势</div>
+              <div style="font-size:12px;color:var(--muted);">金属质感外壳、透明烟油仓、色码识别系统（FUMi）、触控屏科技感——"智能设备"而非"电子烟"的心理定位</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Consumer Quotes -->
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">消费者原声 · Consumer Verbatim</div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div class="quote-block">
+        <div class="quote-text">"The flavour was very tasty without being overly sweet, and Lost Mary seem to have nailed the airflow... I liked that you can see what's happening through the transparent tank."</div>
+        <div class="quote-zh">口味不会过甜，透明烟油仓设计非常实用，能看到剩余量很安心。</div>
+        <div class="quote-source">— Lost Mary BM6000用户 · Planet of the Vapes评测区</div>
+      </div>
+      <div class="quote-block" style="border-left-color:var(--amber);">
+        <div class="quote-text">"We can't stock these quick enough — nearly a week from a single refill pod... some staff members love them."</div>
+        <div class="quote-zh">上架即售罄；一个补充弹仓能用接近一周，员工自己都在用。</div>
+        <div class="quote-source">— Hayati Pro Ultra Plus零售商评价 · Ecigone</div>
+      </div>
+      <div class="quote-block" style="border-left-color:var(--violet);">
+        <div class="quote-text">"The 4-in-1 system is genius — four disposables in one, but with a 1750mAh rechargeable battery... the finish is smart, none of that tacky childish look."</div>
+        <div class="quote-zh">4合1系统相当聪明，外观不土气，一改电子烟的廉价印象。</div>
+        <div class="quote-source">— IVG 2400用户 · Reddit r/UKvapers</div>
+      </div>
+      <div class="quote-block" style="border-left-color:var(--coral);">
+        <div class="quote-text">"FUMi Zingy Ginger has the taste of fizzy cola bottle candy! And Prickly Pear is anything but ordinary — a chance to taste the unique flavour of cactus."</div>
+        <div class="quote-zh">Zingy Ginger竟然有点像可乐糖！Prickly Pear（仙人掌果）这种口味在哪里都找不到。</div>
+        <div class="quote-source">— FUMi Pouch用户 · Two Wombats评测</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SECTION 7: STRATEGY ════════ -->
+<div id="strategy" class="section">
+  <div class="wrapper">
+    <div class="section-tag">07 / Strategic Advice</div>
+    <h2 class="section-title">空白点 <span class="accent">&amp; 出海策略</span></h2>
+
+    <!-- Gap Analysis -->
+    <div style="margin-bottom:40px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">市场空白点分析 · Gap Analysis</div>
+      <div class="card" style="padding:0;">
+        <div style="padding:16px 24px;background:var(--surface2);border-radius:12px 12px 0 0;display:grid;grid-template-columns:220px 1fr 1fr;gap:0;">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;">空白点</div>
+          <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;">当前现状</div>
+          <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--teal);letter-spacing:0.1em;text-transform:uppercase;">机会窗口</div>
+        </div>
+        <div style="padding:0 24px;">
+          <div class="gap-item">
+            <div class="gap-item-label">中等口数轻量化<br><span style="font-size:11px;color:var(--amber);">10K-15K</span></div>
+            <div class="gap-item-now">当前产品要么轻小（6K/轻薄）要么大而重（25K+/厚实）；10K区间设备普遍偏大偏重</div>
+            <div class="gap-item-opp">10K-15K、轻薄外形、1000mAh的"中档最优解"产品空缺，适合日常通勤用户</div>
+          </div>
+          <div class="gap-item">
+            <div class="gap-item-label">10mg预充Pod<br><span style="font-size:11px;color:var(--amber);">低浓度大口数</span></div>
+            <div class="gap-item-now">主流预充Pod全为20mg；10mg选项极少，不适合降尼群体</div>
+            <div class="gap-item-opp">30%英国用户在主动降低浓度；10mg大口数产品是被市场忽视的成长赛道</div>
+          </div>
+          <div class="gap-item">
+            <div class="gap-item-label">高强度+创意口味 Pouch<br><span style="font-size:11px;color:var(--amber);">12mg+ 差异化</span></div>
+            <div class="gap-item-now">Pablo/Killa集中在高强度/单调口味；FUMi有创意口味但强度上限11mg</div>
+            <div class="gap-item-opp">高强度（12mg+）×复合创意口味（东方茶饮/荔枝/青梅）的组合完全空白</div>
+          </div>
+          <div class="gap-item">
+            <div class="gap-item-label">税前低价烟油囤货<br><span style="font-size:11px;color:var(--amber);">Oct 2026 窗口</span></div>
+            <div class="gap-item-now">消费者已开始意识到10月税收后价格将大涨，开始考虑提前囤货</div>
+            <div class="gap-item-opp">向零售商和消费者提供税前大批量采购方案，是2026年Q3最大商业机会</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Strategic Tips -->
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">出海战略建议 · Export Strategy</div>
+
+    <div style="margin-bottom:8px;font-size:12px;color:var(--green);font-family:'DM Mono',monospace;letter-spacing:0.06em;">▶ 立刻行动 · GO</div>
+    <div class="tip-row go">
+      <div class="tip-icon">✅</div>
+      <div><div class="tip-title">合规先行：MHRA通知注册是硬门槛</div><div class="tip-body">所有产品必须完成MHRA通知注册（TPD合规）；2ml弹仓上限、20mg/ml浓度上限是不可逾越的红线。违规风险极大——英国Trading Standards已开始现场执法，对违规门店开罚单并没收产品。</div></div>
+    </div>
+    <div class="tip-row go">
+      <div class="tip-icon">✅</div>
+      <div><div class="tip-title">格式押注：预充弹仓（Pre-filled Pod Kit）是最优解</div><div class="tip-body">重点投入6K-15K口数区间的预充弹仓格式。这一格式在10月税后受冲击最小（2ml Pod仅多£0.44税），是税后性价比的避风港。结合双口味系统、透明可视仓等当前热门设计语言。</div></div>
+    </div>
+    <div class="tip-row go">
+      <div class="tip-icon">✅</div>
+      <div><div class="tip-title">尼古丁袋（Pouch）是新蓝海——现在是最佳入局时机</div><div class="tip-body">目前Pouch无专项税负担，且不受一次性烟弹禁令影响。中国企业可利用成本优势+口味创新（亚洲茶饮、荔枝、桂花等东方口味）进入，对标FUMi挑战者定价逻辑（比VELO低10-15%）。Haypp、NicPouches等专业平台的B2B准入门槛相对低。</div></div>
+    </div>
+
+    <div style="margin-top:20px;margin-bottom:8px;font-size:12px;color:var(--coral);font-family:'DM Mono',monospace;letter-spacing:0.06em;">▶ 需要避坑 · WARNING</div>
+    <div class="tip-row warn">
+      <div class="tip-icon">⚠️</div>
+      <div><div class="tip-title">绝对不要大量进口Shortfill（100ml）烟油进入2026年10月后</div><div class="tip-body">税后100ml Shortfill将多缴£26.40税（含VAT），成本直接翻番。其市场份额将急剧萎缩，库存积压风险极高。产品格式规划需在Tax Day前完成切换。</div></div>
+    </div>
+    <div class="tip-row warn">
+      <div class="tip-icon">⚠️</div>
+      <div><div class="tip-title">不要忽视税务印花（VDS）合规时间线</div><div class="tip-body">2026年10月之后生产的产品必须加贴政府税务印花；HMRC审批最长需45工作日。进口商需提前与HMRC沟通，2026年6月前必须启动注册流程，否则将面临供货中断。</div></div>
+    </div>
+    <div class="tip-row warn">
+      <div class="tip-icon">⚠️</div>
+      <div><div class="tip-title">不要以低价为唯一武器</div><div class="tip-body">英国消费者对口味一致性、设备质量和品牌可信度要求极高。低价+低质会被立刻排除在货架之外。FUMi的成功秘诀是：比主流便宜10%+差异化口味创新——不是简单的价格战。</div></div>
+    </div>
+
+    <div style="margin-top:20px;margin-bottom:8px;font-size:12px;color:var(--violet);font-family:'DM Mono',monospace;letter-spacing:0.06em;">▶ 差异化机会 · OPPORTUNITY</div>
+    <div class="tip-row idea">
+      <div class="tip-icon">💡</div>
+      <div><div class="tip-title">税前Q3是最后的黄金备货窗口（现在到2026年9月）</div><div class="tip-body">消费者和零售商都在寻找税前囤货方案。向UK分销商和大型零售商提供"锁价订单"服务，可以帮助建立战略合作关系，同时在市场上获取优先货架位置。</div></div>
+    </div>
+    <div class="tip-row idea">
+      <div class="tip-icon">💡</div>
+      <div><div class="tip-title">亚洲口味差异化——填补FUMi没有走到的地方</div><div class="tip-body">荔枝冰、桂花乌龙、青梅盐、茉莉薄荷等亚洲特色口味，既满足英国消费者对创意口味的追求，又有真实的文化叙事背书，是难以被欧美本土品牌快速复制的竞争壁垒。</div></div>
+    </div>
+
+    <!-- Expert Insight -->
+    <div style="margin-top:32px;padding:28px;background:linear-gradient(135deg,rgba(45,212,191,0.06),rgba(45,212,191,0.02));border:1px solid var(--teal-border);border-radius:12px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--teal);letter-spacing:0.1em;margin-bottom:14px;">▶ 高级洞察点评 · EXPERT ANALYSIS</div>
+      <p style="font-size:15px;line-height:1.9;color:var(--text);margin-bottom:16px;">英国电子烟市场正在经历的不是"萎缩"，而是一次<strong style="color:#fff;">强制性格式进化</strong>。一次性烟弹被禁，但用户的需求——便利、口味、随取随用——依然旺盛。市场给出了清晰答案：预充弹仓式大口数设备（Pre-filled Big Puff Kit）是目前的最优解，它既满足了监管要求，又几乎完美复制了一次性烟弹的使用体验。</p>
+      <p style="font-size:15px;line-height:1.9;color:var(--text);margin-bottom:16px;">关键洞察在于：<strong style="color:#fff;">消费者并不是在"升级"，而是在"平移"</strong>。Lost Mary BM6000能用完全相同的41种口味、相同的MTL口感服务原来的用户，Hayati的双口味系统更在一次性烟弹从未有过的"口味丰富性"上实现了超越。</p>
+      <p style="font-size:15px;line-height:1.9;color:var(--muted);">对于2026年10月的税收冲击，聪明品牌的策略已经浮现：<strong style="color:var(--teal);">抢在税前完成用户教育和库存布局</strong>。预充Pod（2ml受税额最低，仅£0.44/个）将成为性价比的新避风港，而Shortfill市场将急剧萎缩。这为专注Pod格式的中国出海品牌创造了历史性窗口。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SECTION 8: SOURCES ════════ -->
+<div id="sources" class="section">
+  <div class="wrapper">
+    <div class="section-tag">08 / Methodology & Sources</div>
+    <h2 class="section-title">信息 <span class="accent">来源</span></h2>
+    <div class="source-grid">
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">Tobacco Insider – UK Vapes</div>
+          <div class="source-type">行业数据 / 政策分析</div>
+          <a href="https://tobaccoinsider.com/the-uk-vapes/" target="_blank" class="source-url">tobaccoinsider.com/the-uk-vapes/</a>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">Ecigone – UK Vaping Market 2025</div>
+          <div class="source-type">零售数据 / 产品测评</div>
+          <a href="https://ecigone.co.uk/blogs/ecigone-blogs/uk-vaping-market-analysis-2025" target="_blank" class="source-url">ecigone.co.uk/blogs/uk-vaping-market-analysis</a>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">GOV.UK – Vaping Products Duty</div>
+          <div class="source-type">政府官方公告</div>
+          <a href="https://www.gov.uk/government/publications/introduction-of-vaping-products-duty-from-1-october-2026" target="_blank" class="source-url">gov.uk/vaping-products-duty-oct-2026</a>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">Vape Superstore – UK Vaping Laws</div>
+          <div class="source-type">法规综合 / 消费者指引</div>
+          <a href="https://www.vapesuperstore.co.uk/blogs/news/vaping-laws-uk" target="_blank" class="source-url">vapesuperstore.co.uk/blogs/vaping-laws-uk</a>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">Tobacco Insider – VELO / FUMi</div>
+          <div class="source-type">品牌竞情 / 数据</div>
+          <a href="https://tobaccoinsider.com/velo/" target="_blank" class="source-url">tobaccoinsider.com/velo/</a>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">NicPouches – VELO vs ZYN</div>
+          <div class="source-type">产品对比 / 消费者评测</div>
+          <a href="https://nicpouches.com/blogs/news/velo-vs-zyn" target="_blank" class="source-url">nicpouches.com/blogs/velo-vs-zyn</a>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">E-Cigarette Direct – Best Big Puff</div>
+          <div class="source-type">产品测评 / 专业评测</div>
+          <a href="https://www.ecigarettedirect.co.uk/blogs/ashtray-blog/best-big-puff-vapes" target="_blank" class="source-url">ecigarettedirect.co.uk/blogs/best-big-puff-vapes</a>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">Haypp UK – FUMi Products</div>
+          <div class="source-type">零售数据 / 品牌分析</div>
+          <a href="https://www.haypp.com/uk/nicotine-pouches/fumi" target="_blank" class="source-url">haypp.com/uk/nicotine-pouches/fumi</a>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">Planet of the Vapes – BM6000 Review</div>
+          <div class="source-type">消费者评测 / 社区</div>
+          <a href="https://www.planetofthevapes.co.uk/reviews/starter-kit/lost-mary-bm6000" target="_blank" class="source-url">planetofthevapes.co.uk/lost-mary-bm6000</a>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">Ninja Vapes – Hayati Pro Ultra Plus</div>
+          <div class="source-type">零售数据 / 价格</div>
+          <a href="https://www.ninja-vapes.co.uk/product/hayati-pro-ultra-tpd" target="_blank" class="source-url">ninja-vapes.co.uk/hayati-pro-ultra</a>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">Ashtray Blog – UK Vape Tax</div>
+          <div class="source-type">深度税收分析</div>
+          <a href="https://www.ecigarettedirect.co.uk/blogs/ashtray-blog/uk-vape-tax" target="_blank" class="source-url">ecigarettedirect.co.uk/blogs/uk-vape-tax</a>
+        </div>
+      </div>
+      <div class="source-item">
+        <div class="source-dot"></div>
+        <div class="source-info">
+          <div class="source-title">Evapo – 25 Best Vape Brands 2026</div>
+          <div class="source-type">品牌综合评测</div>
+          <a href="https://evapo.co.uk/blog/best-vape-brands" target="_blank" class="source-url">evapo.co.uk/blog/best-vape-brands</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<div class="footer">
+  <div class="wrapper">
+    <div class="footer-inner">
+      <div class="footer-brand">🇬🇧 UK Nicotine Market Intelligence · 2026 Q1–Q2</div>
+      <div class="footer-meta">
+        <div>报告生成：2026年4月16日</div>
+        <div>数据覆盖：2026年1月—4月</div>
+        <div>英国尼古丁市场深度洞察专家</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── Nav active state on scroll ───
+const sections = document.querySelectorAll('div[id]');
+const navItems = document.querySelectorAll('.nav-item');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navItems.forEach(item => {
+        item.classList.toggle('active', item.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { rootMargin: '-20% 0px -60% 0px' });
+
+sections.forEach(s => observer.observe(s));
+
+// ─── Animate bars on scroll ───
+const bars = document.querySelectorAll('.bar-fill');
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.dataset.width || entry.target.style.width;
+    }
+  });
+}, { threshold: 0.3 });
+bars.forEach(b => barObserver.observe(b));
+</script>
+</body>
+</html>
